@@ -1,0 +1,209 @@
+/* Toggle button styling */
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  .searchicon {
+    border: none;
+    cursor: pointer;
+    size: 30px;
+    padding: 10px;
+    color: var(--text-color);
+  }
+  
+  .searchbackground {
+    color: var(--text-color);
+    background-color: var(--card-background);
+  }
+
+  .grid_card {
+    display: grid;
+    grid-gap: 20px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 10px;
+  }
+  
+  .grid_card > *:nth-child(1),
+  .grid_card > *:nth-child(2),
+  .grid_card > *:nth-child(3),
+  .grid_card > *:nth-child(6) {
+    grid-column: span 2;
+  }
+  
+  .grid_card > *:nth-child(4),
+  .grid_card > *:nth-child(5) {
+    grid-column: span 1;
+  }
+  
+  /* Extra small devices (phones, 480px and down) */
+  @media (max-width: 480px) {
+    .grid_card {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  
+    .grid_card > * {
+      grid-column: span 1; /* Set grid-column to span 1 for all items on mobile devices */
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 481px to 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .grid_card {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  
+    .grid_card > * {
+      grid-column: span 1; /* Set grid-column to span 1 for all items on small devices */
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 769px to 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .grid_card {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    .grid_card > *:nth-child(1),
+    .grid_card > *:nth-child(2),
+    .grid_card > *:nth-child(3),
+    .grid_card > *:nth-child(6) {
+      grid-column: span 2;
+    }
+  
+    .grid_card > *:nth-child(4),
+    .grid_card > *:nth-child(5) {
+      grid-column: span 1;
+    }
+  }
+  
+  /* Large devices (desktops, 1025px and up) */
+  @media (min-width: 1025px) {
+    .grid_card {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  
+    .grid_card > *:nth-child(1),
+    .grid_card > *:nth-child(2),
+    .grid_card > *:nth-child(3),
+    .grid_card > *:nth-child(6) {
+      grid-column: span 2;
+    }
+  
+    .grid_card > *:nth-child(4),
+    .grid_card > *:nth-child(5) {
+      grid-column: span 1;
+    }
+  }
+  
+  .grid_item {
+    color: var(--text-color);
+    background-color: var(--card-background);
+    border-radius: 20px;
+    height: 350px; /* fixed height */
+    padding: 20px;
+    font-size: 1rem; /* Adjust font size */
+  }
+  
+  /* Responsive text size */
+  @media (max-width: 480px) {
+    .grid_item {
+      font-size: 0.8rem; /* Adjust font size for mobile devices */
+    }
+    
+    .grid_card > *:nth-child(4),
+    .grid_card > *:nth-child(5) {
+      grid-column: span 2;
+    }
+
+    .grid_card > *:nth-child(9),
+    .grid_card > *:nth-child(10)
+    .grid_card > *:nth-child(11)
+    .grid_card > *:nth-child(10)
+    {
+      grid-column: span 2;
+    }
+
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .grid_item {
+      font-size: 0.9rem; /* Adjust font size for small devices */
+    }
+  }
+    
+
+  
+  /* Input container styling */
+  .input-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input-with-icon {
+    padding-left: 30px; /* Adjust based on the icon size */
+    border: none;
+    border-radius: 50px;
+    background-color: var(--background-color); /* Use variable */ 
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures the icon does not block input clicks */
+  }
+
+  
+  .table-responsive {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  
+  
+  .table {
+    color: var(--text-color); /* use the CSS variable for text color */
+  }
+  
+  .table th, .table td {
+    padding: 8px;
+    text-align: left;
+    color: var(--text-color); /* use the CSS variable for text color */
+    background-color: transparent; /* remove background color */
+  }
+  .table th, .table td {
+    padding: 8px;
+    text-align: left;
+    background-color: transparent; 
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    color: var(--text-color); /* use the CSS variable for text color */
+    background-color: transparent; /* remove background color */
+  
+  }
+  
+  
+  input[type="checkbox"] {
+    margin: 0 10px;
+  }
+  
+  label {
+    margin-left: 10px;
+  }
